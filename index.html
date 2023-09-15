@@ -1,0 +1,57 @@
+<h1>Boekingsformulier</h1>
+
+    <form >
+
+        <label for="voornaam">Voornaam:</label>
+        <input type="text" id="voornaam" name="voornaam" required pattern="[A-Za-z]+" /><br><br>
+
+        <label for="achternaam">Achternaam:</label>
+        <input type="text" id="achternaam" name="achternaam" required pattern="[A-Za-z]+" /><br><br>
+
+        <label>Geslacht:</label>
+        <input type="radio" id="man" name="geslacht" value="man" checked>
+        <label for="man">Man</label>
+        <input type="radio" id="vrouw" name="geslacht" value="vrouw">
+        <label for="vrouw">Vrouw</label><br><br>
+
+        <label for="straat_huisnr">Straat met huisnummer:</label>
+        <input type="text" id="straat_huisnr" name="straat_huisnr" required /><br><br>
+
+        <label for="postcode">Postcode:</label>
+        <input type="text" id="postcode" name="postcode" required /><br><br>
+
+        <label for="stad">Stad:</label>
+        <input type="text" id="stad" name="stad" required /><br><br>
+
+        <label for="land">Land:</label>
+        <input type="text" id="land" name="land" required /><br><br>
+
+        <label for="bsn">BSN-nummer:</label>
+        <input type="text" id="bsn" name="bsn" required pattern="[0-9]{1,9}" /><br><br>
+
+        <label for="vakantieland">Vakantieland:</label>
+        <select id="vakantieland" name="vakantieland">
+            <option value="Spanje">Spanje</option>
+            <option value="Italië">Italië</option>
+            <option value="Griekenland">Griekenland</option>
+            <option value="Frankrijk">Frankrijk</option>
+        </select><br><br>
+
+        <label for="vertrekdatum">Datum van vertrek:</label>
+        <input type="date" id="vertrekdatum" name="vertrekdatum" min="<?php echo date('Y-m-d'); ?>" required /><br><br>
+
+        <label for="terugkomstdatum">Datum van terugkomst:</label>
+        <input type="date" id="terugkomstdatum" name="terugkomstdatum" min="<?php echo date('Y-m-d'); ?>" required /><br><br>
+
+        <label for="aantal_reisgenoten">Aantal reisgenoten (max 4):</label>
+        <input type="number" id="aantal_reisgenoten" name="aantal_reisgenoten" min="0" max="4" required /><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required /><br><br>
+
+        <label for="wachtwoord">Wachtwoord:</label>
+        <input type="password" id="wachtwoord" name="wachtwoord" required /><br><br>
+
+        <input type="submit" value="Boek nu" />
+
+    </form>
